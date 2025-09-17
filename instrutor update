@@ -1,0 +1,83 @@
+# 🧠 H$kass | TaskBot Sala do Futuro (Em Desenvolvimento)
+
+Bem-vindo ao projeto **H$kass** — um app educacional criado para automatizar tarefas na plataforma [Sala do Futuro](https://sala.educacaoadventista.org.br/), com foco em praticidade, agilidade e integração com inteligência artificial.
+
+> ⚠️ Atenção: o app ainda está em desenvolvimento. Nenhuma automação real está ativa ainda, mas você pode testar a interface e o menu interativo abaixo.
+
+---
+
+## 🎮 Demonstração (interface HTML + menu de testes)
+
+Acesse aqui o protótipo do projeto:
+
+🔗 **[https://hkassdev.github.io/h2akk/](https://hkassdev.github.io/h2akk/)**
+
+---
+
+## 📌 Bookmarklet — Mod Menu de Testes
+
+Você pode ativar um **menu interativo com efeitos e funções** usando esse código direto no navegador:
+
+### 📋 Copie esse código:
+
+---
+
+javascript:(function(){if(document.getElementById("modMenuBtn"))return;let b=document.createElement("button");b.id="modMenuBtn";b.innerText="⚙ Mod Menu";Object.assign(b.style,{position:"fixed",bottom:"20px",right:"20px",zIndex:"9999",padding:"10px 20px",fontSize:"16px",borderRadius:"8px",background:"#ff0055",color:"#fff",border:"none",boxShadow:"0 0 10px #ff0055",cursor:"pointer"});document.body.appendChild(b);let p=document.createElement("div");p.id="modMenuPanel";Object.assign(p.style,{position:"fixed",bottom:"70px",right:"20px",background:"#1a1a1a",border:"2px solid #ff0055",borderRadius:"10px",padding:"15px",color:"#fff",fontFamily:"Arial,sans-serif",display:"none",zIndex:"9999",minWidth:"200px",boxShadow:"0 0 20px #ff0055"});p.innerHTML=<strong style="color:#ff1a75;">🎮 Efeitos:</strong><br><label><input type="checkbox" id="bgFlash"> 💫 Fundo piscando</label><br><label><input type="checkbox" id="spinAll"> 🌀 Girar tudo</label><br><label><input type="checkbox" id="hideText"> 👻 Esconder textos</label><br><label><input type="checkbox" id="rainbowText"> 🎨 Texto arco-íris</label><br><button onclick="stopAllEffects()" style="margin-top:10px;width:100%">❌ Parar tudo</button>;document.body.appendChild(p);b.onclick=()=>{p.style.display=p.style.display==="none"?"block":"none"};let fi,ri;document.getElementById("bgFlash").onchange=function(){if(this.checked){fi=setInterval(()=>{document.body.style.backgroundColor="#"+Math.floor(Math.random()*16777215).toString(16)},200)}else{clearInterval(fi);document.body.style.backgroundColor=""}};document.getElementById("spinAll").onchange=function(){document.body.style.transform=this.checked?"rotate(360deg)":"none";document.body.style.transition=this.checked?"transform 2s linear infinite":"none"};document.getElementById("hideText").onchange=function(){document.querySelectorAll("p,h1,h2,h3,h4,span,a,button,div").forEach(e=>e.style.visibility=this.checked?"hidden":"visible")};document.getElementById("rainbowText").onchange=function(){let e=document.querySelectorAll("p,h1,h2,h3,h4,span,a,button,div");if(this.checked){ri=setInterval(()=>{e.forEach(t=>t.style.color="#"+Math.floor(Math.random()*16777215).toString(16))},300)}else{clearInterval(ri);e.forEach(t=>t.style.color="")}};window.stopAllEffects=function(){document.querySelectorAll("input[type=checkbox]").forEach(c=>c.checked=false);clearInterval(fi);clearInterval(ri);document.body.style.backgroundColor="";document.body.style.transform="none";document.querySelectorAll("p,h1,h2,h3,h4,span,a,button,div").forEach(e=>{e.style.visibility="visible";e.style.color=""})};})();
+
+
+---
+
+## 🖥️ Como usar o Bookmarklet
+
+### 💻 **No PC (navegador)**
+
+1. Copie o código acima.
+2. Abra seu navegador (Chrome, Edge, Firefox).
+3. Vá até a barra de favoritos.
+4. Clique com o botão direito → **Adicionar página**.
+5. Nomeie como quiser (ex: `Mod Menu H$kass`).
+6. No campo de URL, **cole o código acima**.
+7. Salve e clique no bookmark em qualquer site para ativar o menu!
+
+---
+
+### 📱 **No Android (navegador como Kiwi ou Yandex)**
+
+> Esses navegadores permitem JavaScript nos favoritos.
+
+1. Abra o navegador Kiwi ou Yandex.
+2. Crie um novo favorito.
+3. No campo de URL, cole o código do bookmarklet.
+4. Acesse qualquer site e toque no favorito → menu aparecerá!
+
+---
+
+## 📢 Atualizações
+
+Siga o desenvolvedor no Instagram para acompanhar novidades:
+
+🔗 [@vm_dantasxz](https://instagram.com/vm_dantasxz)
+
+---
+
+## 💸 Apoie o Projeto
+
+Quer apoiar o desenvolvimento? Em breve será disponibilizado um link para doações via **PIX**.
+
+---
+
+## 📁 Repositório
+
+Todo o código-fonte está disponível neste repositório:
+
+👉 [`/h2akk`](https://github.com/hkassdev/h2akk)
+
+---
+
+## 🛠️ Aviso Legal
+
+Este projeto é **experimental** e destinado ao **uso educacional**.  
+Não nos responsabilizamos por qualquer uso indevido.  
+Não utilize bots automatizados em plataformas sem autorização.
+
+---
